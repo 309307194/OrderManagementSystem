@@ -16,16 +16,16 @@ namespace WindowsFormsApp1
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            //Application.Run(new FormSplashScreen());
-            FormSplashScreen splashScreen = new FormSplashScreen();
-            if(splashScreen.ShowDialog() == DialogResult.OK)
-            {
-                Application.Run(new FormMain());
-            }
-            else
-            {
-                Application.Exit();
-            }
+            Application.Run(new UserLoginInfoAdd());
+            //FormSplashScreen splashScreen = new FormSplashScreen();
+            //if(splashScreen.ShowDialog() == DialogResult.OK)
+            //{
+            //    Application.Run(new FormMain());
+            //}
+            //else
+            //{
+            //    Application.Exit();
+            //}
         }
     }
 }
