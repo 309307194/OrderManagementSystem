@@ -16,6 +16,7 @@ namespace WindowsFormsApp1
         public FormMain()
         {
             InitializeComponent();
+            
         }
 
         private void toolStripButtonContionDB_Click(object sender, EventArgs e)
@@ -29,6 +30,37 @@ namespace WindowsFormsApp1
             con.Open();
             MessageBox.Show("数据库连接成功");
             con.Close();
+
+        }
+
+        private void toolStripButton1_Click(object sender, EventArgs e)
+        {
+            //FormLogin formLogin = new FormLogin();
+            //formLogin.ShowDialog();
+        }
+
+        private void FormMain_Load(object sender, EventArgs e)
+        {
+            FormLogin formLogin = new FormLogin();
+            formLogin.ShowDialog();
+        }
+
+        private void 退出ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void toolStrip1_Paint(object sender, PaintEventArgs e)
+        {
+            if ((sender as ToolStrip).RenderMode == ToolStripRenderMode.System)
+            {
+                Rectangle rect = new Rectangle(0, 0, this.toolStrip1.Width - 8, this.toolStrip1.Height - 8);
+                e.Graphics.SetClip(rect);
+            }
+        }
+
+        private void toolStripButton1_Click_1(object sender, EventArgs e)
+        {
 
         }
     }
